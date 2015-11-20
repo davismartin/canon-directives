@@ -15,12 +15,14 @@
   <script type="application/javascript" src="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest/canon.min.js"></script>
   <script data-airbrake-project-id="115430" data-airbrake-project-key="e6a55ac2734fa6b4cb19816164f752d2" data-airbrake-environment-name="plnkr" src="https://s3-us-west-2.amazonaws.com/myrs/airbrake.js"></script>
 
-  <script type="application/javascript" src="common.library.js"></script>
-  <script type="application/javascript" src="rs.facets.js"></script>
-  <script type="application/javascript" src="rs.facets.sublist.js"></script>
-  <script type="application/javascript" src="rs.data.grid.js"></script>
+  <script type="application/javascript" src="../lib/scripts/common.library.js"></script>
+  <script type="application/javascript" src="../lib/scripts/service.table.data.js"></script>
+  <script type="application/javascript" src="../lib/scripts/service.table.storage.js"></script>
+  <script type="application/javascript" src="../lib/scripts/rs.facets.js"></script>
+  <script type="application/javascript" src="../lib/scripts/rs.facets.sublist.js"></script>
+  <script type="application/javascript" src="../lib/scripts/rs.data.grid.js"></script>
 
-  <script type="application/javascript" src="app.js"></script>
+  <script type="application/javascript" src="../lib/scripts/app.js"></script>
 </head>
 
 <body class="rs-responsive" ng-app="app.thirdparty">
@@ -86,16 +88,12 @@
           <div class="rs-content rs-panel">
             <div class="rs-inner">
               <alerts></alerts>
-              <h2>Reusable Angular Composite Component</h2>
+              <h2>Dynamic Table Angular Component</h2>
               <p>An example of developing a reusable component in Angular that does these things:</p>
               <ul>
-                <li>Self-populating with data. The data can come from same or different domain from where the component is used. Set CORS policy.</li>
-                <li>Self-aware when it is being loaded and shows a loading icon when the data is being loaded, or remove "loading-table".</li>
+                <li>Generates dynamic table headers (column names) based on data feeds</li>
+                <li>Generates dynamic filters (facets) based on data feeds</li>
                 <li>Reports front-end errors to a hosted service on same or different domain (Airbrake.io).</li>
-                <li>Easy to implement by any Angular app. Just inject the module and reference the javascript files.</li>
-                <li>A composite of directives that are contained in a core module, and these directives can be shared by other similar composite components.</li>
-                <li>Uses Lodash to join two disparate data sources, one for core device info, other for cogs menu info.</li>
-                <li>The component's template can be a templateUrl or a template. The former allows for customizing the template, the latter allows for one less file to reference.</li>
               </ul>
 
               <div ng-controller="parentAppController as parentCtlr">
